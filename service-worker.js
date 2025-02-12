@@ -5,15 +5,19 @@ const filesToCache = [
   "/styles.css",
   "/app.js",
   "/manifest.json",
-  "/icons/icon-192x192.png",
-  "/icons/icon-512x512.png",
+  "/images/android-chrome-192x192.png",
+  "/images/android-chrome-512x512.png",
 ];
-
 
 self.addEventListener("install", (event) => {
   event.waitUntil(
-    caches.open(cacheName).then((cache) => {
-      return cache.addAll(filesToCache);
+    caches.open(cacheName).then(async (cache) => {
+      try {
+        await cache.addAll(filesToCache);
+        console.log("Files cached successfully ✅");
+      } catch (error) {
+        console.error("Caching failed", error);
+      }
     })
   );
 });
