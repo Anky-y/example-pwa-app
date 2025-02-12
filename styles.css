@@ -5,25 +5,58 @@ body {
   align-items: center;
   height: 100vh;
   margin: 0;
-  background-color: #f5f5f5;
+  background-color: #f4f4f4;
 }
 
 #app {
   text-align: center;
   background: white;
-  padding: 30px;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+  min-width: 300px;
+}
+
+h1 {
+  margin-bottom: 20px;
+  font-size: 28px;
+  color: #333;
 }
 
 button {
-  padding: 10px;
-  font-size: 20px;
+  padding: 15px 25px;
+  font-size: 24px;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
   cursor: pointer;
+  margin: 10px;
+  transition: all 0.2s ease-in-out;
+}
+
+#decrement {
+  background-color: #e74c3c;
+  color: white;
+}
+
+#increment {
+  background-color: #2ecc71;
+  color: white;
+}
+
+#decrement:hover {
+  background-color: #c0392b;
+}
+
+#increment:hover {
+  background-color: #27ae60;
 }
 
 #counter {
-  margin: 20px;
-  font-size: 30px;
+  display: inline-block;
+  min-width: 60px;
+  font-size: 36px;
   font-weight: bold;
+  color: #333;
+  margin: 0 20px;
 }
