@@ -11,27 +11,29 @@ body {
 #app {
   text-align: center;
   background: white;
-  padding: 40px;
+  padding: 20px;
   border-radius: 15px;
   box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
-  min-width: 300px;
+  width: 90%;
+  max-width: 350px;
 }
 
 h1 {
-  margin-bottom: 20px;
-  font-size: 28px;
+  margin-bottom: 15px;
+  font-size: 24px;
   color: #333;
 }
 
 button {
-  padding: 15px 25px;
-  font-size: 24px;
+  padding: 12px 20px;
+  font-size: 20px;
   font-weight: bold;
   border: none;
   border-radius: 8px;
   cursor: pointer;
-  margin: 10px;
   transition: all 0.2s ease-in-out;
+  width: 45%;
+  min-width: 100px;
 }
 
 #decrement {
@@ -53,10 +55,41 @@ button {
 }
 
 #counter {
-  display: inline-block;
-  min-width: 60px;
+  display: block;
   font-size: 36px;
   font-weight: bold;
   color: #333;
-  margin: 0 20px;
+  margin: 15px 0;
+}
+
+/* Button container to align buttons properly */
+.button-container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 250px;
+  margin: auto;
+}
+
+/* Responsive adjustments */
+@media (max-width: 480px) {
+  #app {
+    padding: 15px;
+    width: 95%;
+    max-width: 300px;
+  }
+
+  h1 {
+    font-size: 22px;
+  }
+
+  button {
+    font-size: 18px;
+    padding: 10px 15px;
+    width: 48%;
+  }
+
+  #counter {
+    font-size: 30px;
+  }
 }
